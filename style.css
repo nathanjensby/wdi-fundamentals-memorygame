@@ -1,0 +1,54 @@
+a:hover {
+	color:#ee5f3c;
+}
+a {
+	text-decoration:none;
+	color: white;
+	padding:35px;
+	display:inline-block;
+	float:left;
+	background-color:#ffbf00;
+	}
+
+nav {
+	background-color:#808080;
+}
+.clearfix:after {
+        visibility: hidden;
+        display: block;
+        content: " ";
+        clear: both;
+        height: 0;
+        font-size: 0;
+      }
+
+.board {
+	height:50%;
+	width:50%;
+	display: inline-block;
+	float: left;
+	margin: 8%;
+}
+.card {
+	height:200px;
+	width:150px;
+	border:1px solid rgb(0,0,0);
+	background-color:yellow;
+	border-radius: 10px;
+	margin:5%;
+	float: left;
+}
+h1 {
+	color:rgb(2,132,130);
+}
+h2 {
+	color:#ffd700;
+}
+#name {
+	color: #ff0000;
+}
+footer {
+	clear:both;
+	background-color: #808080;
+	text-align:center;
+}
