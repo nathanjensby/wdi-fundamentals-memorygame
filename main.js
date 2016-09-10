@@ -3,7 +3,6 @@ var cardTwo = "queen";
 var cardThree = "king";
 var cardFour = "queen";
 
-/*var cards = ['queen', 'queen','king','king'];*/
 /*if (cardOne === cardFour) {
 	alert("You found a match!");
 }
@@ -12,9 +11,13 @@ var cardFour = "queen";
 	}
 console.log("JS file is connected to HTML! Woo!")*/
 
-var board = document.getElementById("game-board");
-for (var i = 0; i < cards.length; i++) {
-	var cardElement = document.createElement('div');
-	cardElement.className = 'card';
-	cardElement.appendChild(.board);
-}
+var board = document.getElementById('game-board');
+var createBoard = function() {
+	for (var i = 0; i < 4; i++) {
+		var cardElement = document.createElement('div');
+		cardElement.className = 'card';
+		board.appendChild(cardElement);
+	};
+};
+
+createBoard();
