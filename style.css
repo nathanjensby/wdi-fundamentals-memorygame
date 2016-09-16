@@ -52,3 +52,9 @@ footer {
 	background-color: #808080;
 	text-align:center;
 }
+img {
+	height:200px;
+	width:150px;
+	border:1px solid rgb(0,0,0);
+	border-radius: 10px;
+}
