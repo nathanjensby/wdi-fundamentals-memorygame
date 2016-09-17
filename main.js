@@ -9,11 +9,28 @@ var createBoard = function() {
 		cardElement.setAttribute('data-card', cards[i])
 		board.appendChild(cardElement);
 		cardElement.addEventListener('click', isTwoCards);
-		cardElement.addEventListener('click', flipCard);
+		
 	};
 };
 
 createBoard();
+
+function isTwoCards() {
+	if (this.getAttribute('data-card') === 'king') {
+		this.innerHTML = '<img src="king.png" alt="king of dorks" />';
+	}
+	else {
+		this.innerHTML = '<img src="queen.jpg" alt="queen of farts" />';
+		};
+	cardsInPlay.push(this.getAttribute('data-card'));
+	if (cardsInPlay.length === 2) {
+		isMatch(cardsInPlay);
+		cardsInPlay = [];
+	for (var i = 0; i<cardsInPlay.length; i++) {
+		cardsInPlay[i].innerHTML= ' ';
+	}
+	}
+};
 
 var isMatch = function() {
 	if (cardsInPlay[0] === cardsInPlay[1]) {
@@ -21,23 +38,6 @@ var isMatch = function() {
 }
 	else {
 		alert("Sorry, try again.")
-	}
-};
+	};
 
-function isTwoCards() {
-	cardsInPlay.push(this.getAttribute('data-card'));
-	if (cardsInPlay.length === 2) {
-		isMatch(cardsInPlay);
-		cardsInPlay = [];
-	}
-};
-
-function flipCard() {
-	var cardElement = document.getElementByClass('card');
-	if (cardElement.getAttribute('data-card') === 'king') {
-		cardElement.innerHTML = 'img src="king.png" alt="king of dorks" />';
-	}
-		else {
-			cardElement.innerHTML = 'img src="queen.png" alt="queen of farts" />';
-		}
 };
