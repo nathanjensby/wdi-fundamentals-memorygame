@@ -26,9 +26,6 @@ function isTwoCards() {
 	if (cardsInPlay.length === 2) {
 		isMatch(cardsInPlay);
 		cardsInPlay = [];
-	for (var i = 0; i<cardsInPlay.length; i++) {
-		cardsInPlay[i].innerHTML= ' ';
-	}
 	}
 };
 
@@ -39,5 +36,8 @@ var isMatch = function() {
 	else {
 		alert("Sorry, try again.")
 	};
+	for (var i = 0; i<cardsInPlay.length; i++) {
+		cardsInPlay[i].innerHTML= ' ';
+	}
 
 };
